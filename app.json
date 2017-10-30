@@ -1,0 +1,7 @@
+{
+  "name": "3dio-floor-plan-app",
+  "description": "Convert floor plan images into 3d models using 3d.io APIs",
+  "repository": "https://github.com/archilogic-com/3dio-floor-plan-app",
+  "logo": "https://3d.io/favicon.png",
+  "keywords": ["3d", "floor plan", "architectural visualization"]
+}

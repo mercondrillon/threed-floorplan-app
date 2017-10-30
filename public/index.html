@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>3d.io Floor Plan App</title>
+    <meta name="charset" content="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="3d, aframe, webgl, webvr, archilogic, 3d.io, interior, 3d furniture">
+    <meta name="description" content="Thousands of “low poly / high quali” 3d models of real furniture ready for your A-Frame apps.">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="helium-css/helium.js"></script>
+    <script src="https://dist.3d.io/releases/3dio-js/1.x.x-beta/3dio.min.js"></script>
+</head>
+
+<body>
+    <form class='order-container' onsubmit="return submitHandler()">
+        <div class='row'>
+            <h2>Convert your floor plan into an interactive 3D model for free!</h2>
+            <div id="file-drop-box" class="order-info-upload">
+                <div class="content-dropzone free-order" title="Free 3D model floor plan upload" file-keys="">
+                    <label class="dropzone-area">
+                        <div class="dropzone-text">
+                          <span class="dropzone-info">
+                            <img width="60px" src="https://spaces-static.archilogic.com/build/170825-123340-a421eda/admin/img/icon-upload-floorplan.svg">
+                            Upload Floor Plan
+                          </span>
+                        </div>
+                    </label>
+                </div>
+            </div>
+            <div class="order-field">
+                <input name='floor-plan=url' id="floor-plan-url" type='text' required="required" class="order-input">
+                <label for="address" class="order-label"> ... or enter image URL here</label>
+            </div>
+        </div>
+        <div class='row'>
+            <div class="order-text address">
+                Conversion takes a while, please enter an email-address so we can notify you when we are done </div>
+            <div style="" class="order-field">
+                <input id="email" required="required" class="order-input popup-order-input-invalid" style="width: 100%;">
+                <label for="address" class="order-label">Email</label>
+            </div>
+        </div>
+
+        <div class='row'>
+            <div class="order-text address">
+                Optional: Add location name for lighting settings
+            </div>
+            <div class="order-field address">
+                <input id="address" placeholder="e.g. Springfield" class="order-input" autocomplete="off">
+            </div>
+
+        </div>
+
+        <div class='row'>
+            <button type="submit" class="convert-button order-btn">
+                <span>Convert</span>
+            </button>
+            <button  class="order-btn white" type="button" id="btn-clear">
+                <span>Clear Fields</span>
+            </button>
+            <div id="api-info" class="order-text"></div>
+        </div>
+
+    </form>
+    <div class="row detail-links">
+      <a href="https://3d.io/docs/api/1/convert-floor-plan-to-3d.html" target="_blank">Docs</a> |
+      <a href="https://github.com/archilogic-com/3dio-floor-plan-app" target="_blank">Github</a> |
+      <a href="https://stackoverflow.com/questions/tagged/aframe%20and%203d.io%20or%20archilogic" target="_blank">Stack Overflow</a> |
+      <a href="https://3d.io" target="_blank">3d.io</a>
+    </div>
+    <div id="api-info"></div>
+    <script src="app.js"></script>
+</body>
+
+</html>
